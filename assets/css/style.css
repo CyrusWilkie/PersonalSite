@@ -1,0 +1,58 @@
+nav {
+    background-color: blueviolet;
+}
+
+.branding {
+    background-color: brown;
+}
+
+.landing {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.intro {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #001829 0%, #003153 100%);
+    mix-blend-mode: overlay;
+}
+
+.sunset {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom, #00182900 0%, #fe5757 100%);
+    animation: colorChange1 30s ease-in-out infinite;
+    animation-fill-mode: both;
+    mix-blend-mode: overlay;
+}
+
+
+@keyframes colorChange1 {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: .9;
+    }
+}
+
+@keyframes colorChange2 {
+    0%,
+    100% {
+      opacity: .9;
+    }
+    50% {
+      opacity: 0;
+    }
+}
