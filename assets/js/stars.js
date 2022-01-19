@@ -108,13 +108,6 @@ var canvas  = document.getElementById('canvas'),
 		backgroundSpeed: 0
 	};
 
-var gui;
-gui = new dat.GUI();
-gui.add(params, 'maxDistFromCursor').min(0).max(100).step(10).name('Size');
-gui.add(params, 'dotsSpeed').min(0).max(100).step(.5).name('Speed');
-gui.add(params, 'backgroundSpeed').min(0).max(150).step(1).name('Sky speed');
-gui.open();
-
 setCanvasSize();
 init();
 
@@ -140,7 +133,9 @@ function init() {
 function animate() {
     ctx.clearRect(0, 0, WIDTH, HEIGHT);
 
-    
+    for (var i in stars) {
+    	stars[i].move();
+    }
     for (var i in dots) {
     	dots[i].move();
     }
